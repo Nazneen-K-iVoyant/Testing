@@ -1,0 +1,71 @@
+Manual Testing
+
+Am individual will open the website, ineract with the website and ensures everything works as intended.
+
+If a new feature is released, you repeat the same steps.
+
+You may have to test not only the new feature but also the existing features
+
+Drawbacks:
+- Time consuming
+- Complex repetitive tasks has a risk of human error
+- You may not get a chance to test all the features you should.
+
+
+
+Automated Testing
+
+Automated tests are programs that automate the task of testing your software.
+Write code to test the software code.
+Additional efforts required when you develop a feature.
+
+Advantages:
+- Not time consuming.
+- Relaible, consistent and not error prone.
+- Easy to identify and fix features that break tests.
+- Gives confidence when shipping software.
+
+
+Jest 
+- Jest is a Javascript testingg framework
+- Jest is a test runner that finds tests, runs the testss, determine whether the tests passed or failed and reports it back in a human readable manner.
+
+RTL - React testing library
+- Javascript testing utiility that provides virtual DOM for testing React components.
+- React testing library provides a virtual DOM which we can use to interact with and verify the behaviour of a react component.
+- Testing library is infact a family of packages which helps test UI components.
+- The core library is called DOM testing library and RTL is simply a wrapper around this core library to test React applications in an easier way.
+
+
+Types of tests:
+- Unit tests
+- Integration tests
+- E2E tests
+
+queryBy
+- Returns the matching node for a query, and return null if no elements match
+- Useful for asserting an element
+- Throws an error if more than one match is found
+
+queryAllBy
+- Returns an array of matching nodes for a query, and returns an empty array if no elements match
+
+findBy
+- Returns a Promise which resolves when an element is found which matches the given query
+- The promise is rejected if no element is found or if more than one element is found after a default timeout of 1000s
+
+findAllBy
+- Returns a promise which resolves to an array of elements when any elements are found which match the given query
+- The promise is rejected if no elements are found after a default timeout of 1000ms
+
+
+****************************************************************
+User Interactions:
+
+A click using a mouse or a keypress using a keyboard, software has to respond to such Interactions
+Tests should ensure the Interactions are handled as expected
+
+
+user-event:
+A companion library for testing library that simulates users interactions by dispatching the events that would happen if the interaction took place in a browser.
+It is the recommeneded way to test user interactions with RTL
