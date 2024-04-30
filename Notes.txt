@@ -69,3 +69,55 @@ Tests should ensure the Interactions are handled as expected
 user-event:
 A companion library for testing library that simulates users interactions by dispatching the events that would happen if the interaction took place in a browser.
 It is the recommeneded way to test user interactions with RTL
+
+*******************************************
+All the apis from user interactions are asynchronous, and we therefore use async and await
+******************************************
+
+
+******************************************
+All user event apis are asynchronous
+********************
+
+
+Convenience APIs:
+- click()
+- dbClick()
+- tripleClick()
+- hover()
+- unhover()
+
+
+Pointer Interaction:
+
+Pointer accepts an object as argument and we specify the keys property.
+You can pass string if keys is the only argument to the function.
+
+Pointer APIs
+pointer({keys:'[MouseLeft]})
+pointer({keys:'[MouseLeft][Mouserright]'})
+pointer('[MouseLeft>]')
+pointer('[/MouseLeft]')
+
+***************************************************
+
+keyboard interactions
+
+Utility API:
+type()
+- clear()
+- selectOptions()
+- upload()
+
+Convenience API:
+tab()
+
+Clipboard APIs
+- copy()
+- cut()
+- paste()
+
+keyboard APIs:
+- the keyboard api allows to simulate interactions with a keyboard, it accepts a string describing the key actions
+- If you want to hold a key, 
+  keyboard('{Shift>}A{/Shift}) // translates to: Shift(down), A, Shift(up)

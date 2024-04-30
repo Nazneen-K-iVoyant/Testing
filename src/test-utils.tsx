@@ -1,0 +1,13 @@
+import React, { ReactElement } from 'react'
+import {RenderOptions, render} from '@testing-library/react'
+import { AppProviders } from './providers/app-providers'
+
+
+const customRender = (ui:ReactElement, options?:Omit<RenderOptions,'wrapper'>) =>
+  render(ui, {wrapper: AppProviders, ...options})
+
+// re-export everything
+export * from '@testing-library/react'
+
+// override render method
+export {customRender as render}
