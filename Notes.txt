@@ -121,3 +121,34 @@ keyboard APIs:
 - the keyboard api allows to simulate interactions with a keyboard, it accepts a string describing the key actions
 - If you want to hold a key, 
   keyboard('{Shift>}A{/Shift}) // translates to: Shift(down), A, Shift(up)
+
+
+***********************************************************************************************
+Testing React Hooks:
+For testing react hooks we do not rely on render and screen from testing library instead we reply on renderHook, which returns a result which in turn returns a current  property that has all the return values of the custom hook, 
+  - And if we want to invoke the hook with props you can pass in an option object to render hook with a key call initialProps
+**************************************************************************************************
+
+Real APIs are primarily used only for end-to-end tests and not for unit or functional tests,
+  - For one we dont have to ensure the server is up and running to test whether the component renders as intended
+  - Since these tests are run quite often it is not feasible to include real apis which may even charge you  based on the number of requests
+For this what we have to do is, mock the http requests in our test
+**************************************************
+Static Analysis testing
+Process of verifying that your code meets certain expectations without actually running it
+Advantages:
+  - Ensure consistent style and formatting
+  - Check for common mistaked and possible bugs
+  - Limit the complexity of code 
+  - Verify type consistency
+
+- All types of tests run the code and then compare the outcome against known  expected outputs to see if everything works OK
+- Static testing analyses aspects such as readabily, consistency, error handling, type checking and alignment with best practices.
+- Testing checks if your code works or not, whereas static analysis checks if it is written well or not.
+
+Static analysis testing tools
+- Typescript 
+- ESlint
+- Prettier
+- Husky
+- lint-staged
